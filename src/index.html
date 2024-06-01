@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load ="partials/header.html" />
 
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanilla App Template</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
 
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
+<body>
+  <section class="cooperation-section">
+    <h2>Let’s work together</h2>
+    <form id="cooperation-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required
+        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+      <input type="tel" name="phone" placeholder="Your Phone" required>
+      <button type="submit">Send message</button>
+    </form>
+  </section>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+  <!-- Modal Window -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h3>Thank you for your interest in cooperation!</h3>
+      <p>We will get back to you soon.</p>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>
