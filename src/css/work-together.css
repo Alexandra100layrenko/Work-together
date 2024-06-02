@@ -7,36 +7,128 @@
 
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    color: #333;
 }
 
-.cooperation-section {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+section {
+    padding: 60px 20px;
     text-align: center;
+    position: relative;
 }
+
+/*----H2-----*/
+
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    font-size: 108px;
+    line-height: 124px;
+    letter-spacing: 1.8px;
+    margin-bottom: 80px;
+    margin-top: 0;
+    display: block;
+    max-width: 60%;
+}
+
+.accet-green {
+    color: #00B068;
+}
+
+/*-----contacts-form-----*/
+
+.contacts-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+/*------company-contacts-----*/
+.company-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 288px;
+    justify-content: space-between;
+}
+
+h3 {
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 120px;
+}
+
+.decorative-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 526px;
+    height: 408px;
+    transform: translateY(-80px);
+}
+
+.address-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/*-------cooperation-form------*/
 
 #cooperation-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 32px;
+    height: 288px;
+    justify-content: space-between;
 }
 
 input,
+textarea,
 button {
-    padding: 10px;
+    padding: 12px 24px;
     font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+textarea {
+    width: 592px;
+    height: 128px;
+}
+
+input {
+    width: 592px;
+    height: 48px;
 }
 
 button {
+    width: 173px;
+    height: 48px;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -46,6 +138,8 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+/*-------modal------*/
 
 .modal {
     display: none;
@@ -57,23 +151,53 @@ button:hover {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
+    background-color: #f0f0f0;
+    padding: 64px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 400px;
+    max-width: 492px;
+    height: 280px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 16px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #00B068;
+    margin-bottom: 16px;
+}
+
+p {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .close-button {
     color: #aaa;
-    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
     font-size: 28px;
     font-weight: bold;
 }
@@ -83,4 +207,45 @@ button:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Hide decorative image when modal is active */
+.modal-active .decorative-image {
+    display: none;
+}
+
+
+/*----media queries----*/
+
+@media (min-width: 320px) and (max-width: 767px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .contacts-form {
+        flex-direction: column;
+    }
+
+    #cooperation-form input,
+    #cooperation-form textarea,
+    #cooperation-form button {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    header nav ul {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1280px) {
+    header nav ul {
+        justify-content: space-between;
+    }
 }

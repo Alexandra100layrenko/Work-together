@@ -1,24 +1,52 @@
-import * as basicLightbox from 'basiclightbox'
+<section id="contact" class="cooperation-section">
+    <h2>Let’s
+        <span class="accet-green">work together</span>
+    </h2>
+    <img src="../img/background-png.png" alt="Decorative Image" class="decorative-image">
+    <div class="contacts-form">
+        <ul class="company-contacts">
+            <h3>Contact me to transform your ideas into exceptional solutions</h3>
+            <li class="address-list">
+                <a class="contact-item phone" href="tel:+380904567890">
+                    <svg class="link-icon" width="24" height="24">
+                        <use href="./img/icons.svg#icon-phone"></use>
+                    </svg>
+                    +38 090 456 78 90
+                </a>
+            </li>
+            <li class="address-list">
+                <a class="contact-item company-mail" href="mailto:lloydjefferson@gmail.com">
+                    <svg class="link-icon" width="24" height="24">
+                        <use href="./img/icons.svg#icon-email"></use>
+                    </svg>
+                    lloydjefferson@gmail.com
+                </a>
+            </li>
+            <li class="address-list">
+                <a class="contact-item location" href="https://maps.google.com/?q=USA, New York" target="_blank">
+                    <svg class="link-icon" width="24" height="24">
+                        <use href="./img/icons.svg#icon-location"></use>
+                    </svg>
+                    USA, New York
+                </a>
+            </li>
+        </ul>
 
-<section class="cooperation-section">
-    <h2>Let’s work together</h2>
-    <form id="cooperation-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required
-            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
-        <input type="tel" name="phone" placeholder="Your Phone" required>
-        <button type="submit">Send message</button>
-    </form>
+        <form id="cooperation-form">
+            <input type="email" name="email" placeholder="Your Email*" required
+                pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+            <textarea name="comment" placeholder="Message" required></textarea>
+            <button type="submit">Send message</button>
+        </form>
+    </div>
 </section>
 
 <!-- Modal Window -->
 <div class="modal" id="modal">
     <div class="modal-content">
         <span class="close-button">&times;</span>
-        <h3>Thank you for your interest in cooperation!</h3>
-        <p>We will get back to you soon.</p>
+        <h4>Thank you for your interest in cooperation!</h4>
+        <p>The manager will contact you shortly to discuss further details and opportunities for cooperation. Please
+            stay in touch.</p>
     </div>
 </div>
-
-<script type="module" src="../js/work-together.js"></script>
-<script type="module" src="./main.js"></script>
